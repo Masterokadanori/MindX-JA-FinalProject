@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login or Sign Up</title>
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/signUpLogin.css" />
+    <script>
+      function registerGo() {
+        window.location.href = "./register.html";
+      }
+      function loginGo() {
+        window.location.href = "./login.html";
+      }
+    </script>
+  </head>
+  <body style="height: 100vh; overflow: hidden">
+    <div class="container">
+      <div class="login_frame">
+        <h1>Join with us</h1>
+        <button class="buttonUptoDown" onclick="registerGo()">Register</button>
+        <div class="div_line"></div>
+        <button class="buttonDowntoUp" onclick="loginGo()">Login</button>
+      </div>
+    </div>
+  </body>
+</html>
