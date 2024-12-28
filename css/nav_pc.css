@@ -1,0 +1,69 @@
+nav {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  background-color: rgb(200, 200, 200, 0.9);
+  justify-content: space-between;
+  z-index: 10;
+}
+.nav_ul {
+  display: flex;
+  list-style: none;
+}
+.nav_ul li {
+  margin: 0 50px;
+}
+.nav_ul li a {
+  position: relative; /* Ensure pseudo-elements are positioned relative to the button */
+  display: inline-block; /* Restrict size to the button content */
+  padding: 10px 20px; /* Add some padding for button size */
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; /* Show pointer on hover */
+  font-family: "Lato", sans-serif; /* Match the font */
+  background: transparent; /* Set background to transparent */
+  overflow: hidden; /* Ensure the pseudo-element doesn’t overflow the button */
+  z-index: 1; /* Ensure button text is above pseudo-element */
+}
+
+.nav_ul li a::after {
+  content: ""; /* Add empty content for the pseudo-element */
+  position: absolute; /* Position relative to the button */
+  width: 0; /* Initial width is 0 */
+  height: 100%; /* Match button's height */
+  top: 0;
+  left: 0;
+  background: black; /* Add a background for hover effect */
+  z-index: -1; /* Place behind the button text */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.nav_ul li a:hover {
+  color: white; /* Change text color on hover */
+}
+
+.nav_ul li a:hover::after {
+  width: 100%; /* Expand pseudo-element to full width */
+}
+
+.nav_ul li a:active {
+  top: 2px; /* Simulate button press effect */
+}
+
+#logo {
+  margin-left: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.logo {
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.12);
+  background-color: white;
+  padding: 10px;
+  border-radius: 1rem;
+}
