@@ -1,0 +1,29 @@
+.trip_present div {
+  border: 1px solid black;
+  padding: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.trip_present {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.trip_present button {
+  background-image: url(https://freepngdesign.com/content/uploads/images/cross-mark-emoji-5695.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+    width:30%;
+    border-radius: 30%;
+  aspect-ratio: 1/1;
+  display: inline-flex;
+  transition: all 0.3s ease;
+  color:transparent;
+}
+.trip_present button:hover {
+transform: scale(1.1);
+  }
+.trip_present button:active{
+    transform : translateY(20px);
+}
