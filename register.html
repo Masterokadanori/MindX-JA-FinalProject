@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="./css/signUpLogin.css">
     <link rel="stylesheet" href="./css/layout.css">
 </head>
-<body style="height: 100vh; overflow: hidden;">
+<body style=" margin:0;padding:0;height:100%;width:100%;">
+    <div class="whole">
     <div class="container">
         <div class = "login_frame">
             <h1>Register</h1>
             <label for="email">Please type your email:</label>
             <input id = "email">
-            <label for="phoneNum">Please type your phone number:</label>
-            <input id="phoneNum">
+            <div class="error"></div>
             <label for="pass">Please type your password:</label>
             <input id="pass">
-            <label for="Confirmpass">Please Confirm your password:</label>
+            <div class="error"></div>
+            <label for="Confirmpass">Please confirm your password:</label>
             <input id="Confirmpass">
+            <div class="error"></div>
             <button class = "btn-15">Register</button>
-      </div>
+      </div></div>
+      <script src="./js/register.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attending</title>
+    <link rel="stylesheet" href="./css/layout.css" />
+  </head>
+  <body>
+    <div
+      style="
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-rows:1fr 1fr 1fr 1fr 2fr 1fr 3fr;
+        padding-left: 20%;
+        
+        overflow:hidden;
+        position:fixed;
+      "
+    >
+      
+      <h1 id="name">Tên chuyến đi: Đà Nẵng</h1>
+      <h1 id="time">Thời gian bắt đầu: </h1>
+      <h1 id="duration">Chuyến đi kéo dài: </h1>
+      <h1 id="price">Giá tiền:</h1>
+      <img
+        id="image"
+        style="width: 30%; aspect-ratio: 2/1"
+        alt="Tạm thời không có hình ảnh"
+      />
+      <button id="but" class="btn-15" style="width: 15%; margin-top:5vh">Đặt hàng</button>
+    </div>
+    <script src="/js/purchase.js"></script>
+  </body>
+</html>

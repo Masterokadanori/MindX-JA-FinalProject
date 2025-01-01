@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your profile</title>
+    <link rel="stylesheet" href="./css/signUpLogin.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+
+    <script>
+      //Logout
+      function logout() {
+        localStorage.setItem("login", "none");
+        let users = JSON.parse(localStorage.getItem("users"));
+        let user = JSON.parse(localStorage.getItem("user"));
+        users.forEach((element) => {
+          if (element.email === user.email) {
+            element.trip = user.trip;
+          }
+        });
+        localStorage.setItem("user", JSON.stringify({}));
+        localStorage.setItem("users", JSON.stringify(users));
+        window.location.href = "index.html";
+      }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div id="logo">
+        <h1 class="logo">Tet Travel</h1>
+      </div>
+      <ul class="nav_ul">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li onclick="logout()"><a>Log Out</a></li>
+      </ul>
+    </nav>
+    <div class="container" style="align-items: start">
+      <h1>Your profile</h1>
+      <img id="profile" alt="Hiện không có hình ảnh" />
+      <div class="mark">
+        <h2 id="email">Email:</h2>
+      </div>
+      <div class="mark">
+        <h2 id="password">Your password: ********</h2>
+      </div>
+      <h2>Your Trip:</h2>
+      <div class="trip_present"></div>
+    </div>
+    <script src="js/profile_infor.js"></script>
+  </body>
+</html>
